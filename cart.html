@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+         margin: 0px;
+         padding: 0px;
+         font-family: 'Baloo Bhai 2', cursive;
+        
+        }
+
+        #navbar{
+            display: flex;
+            text-align: center;
+            position: sticky;
+                top: 0px;
+            /* justify-content: center; */
+        }
+
+        /* this is for logo and img */
+        #logo{
+            height: 80px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 50px;
+            padding: 5px;
+            filter: invert(100%);
+        }
+        #logo img{
+            height: 40px;
+            width: 10px;
+        }
+
+        /* This is for ul  */
+
+        #navbar ul{
+            display: flex;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 107%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+
+        }
+
+        #navbar ul li{
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navbar ul li a{
+            text-decoration: none;
+            display: block;
+            margin: 20px 60px;
+            color:white;
+            /* border: 2px solid black; */
+            padding: 10px;
+            /* padding: 40px; */
+        }
+
+        #navbar ul li a:hover{
+            border:2px solid black;
+            border-radius: 10px;
+            background-color: grey;
+            color: black;
+            font-weight: bold;
+        }
+
+        #cart{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .cart_item{
+            height: 350px;
+            width: 300px;
+            border:2px solid black;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 23px;
+            background-color: rgb(233, 224, 224);
+            cursor: pointer;
+        }
+        .cart_item>img{
+            height: 250px;
+            width: 250px;
+            border-radius: 23px;
+            border: 2px solid black;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body style="background-color:burlywood">
+    <nav id="navbar">
+        <img src="./HomePageImages/Logo.png" alt="OnlineMeals.com" id="logo">
+
+         <ul>
+             <li class="item"><a href="./index.html">Home</a></li>
+             <li class="item"><a href="./Menu.html">Menu</a></li>
+             <li class="item"><a href="./aboutus.html">About us</a></li>
+             <li class="item"><a href="./cart.html"><div id="item__cart">Cart</div></a></li>
+             <li class="item"><a href="./cart.html"><div id="item__price">Total()</div></a></li>
+         </ul>
+
+    </nav>
+    <div style="background-color:burlywood;margin-top: -14px;">
+        <h3 style="margin-top: 20px;font-size: xx-large;text-align: center;">Your Items</h3>
+        <div id="cart">
+            <!-- <div class="cart_item">
+                <img src="kadai-paneer.jpg" alt="">
+                <p style="text-align: center; font-size: larger;">Kadai Paneer</p>
+            </div> -->
+        
+        </div>
+    </div>
+</body>
+
+<script>
+    let cart = document.getElementById('cart')
+    let food_items = [
+        {
+            image:'./MenuImages/KadaiPaneer.jpg',
+            name:'Kadai Panner',
+            price: 'Rs. 250',
+            id:"KadaiPaneer"
+        },
+        {
+            image:'./MenuImages/MasalaPasta.jpg',
+            name:'Masala Pasta',
+            price: 'Rs. 150',
+            id:"MasalaPasta"
+        },
+        {
+            image:'./MenuImages/MasalaMacaroniPasta.jpg',
+            name:'Masala Macaroni Pasta',
+            price: 'Rs. 150',
+            id:"MasalaMacaroniPasta"
+        },
+        {
+            image:'./MenuImages/WhiteSaucePasta.jpg',
+            name:'White Sauce Pasta',
+            price: 'Rs. 150',
+            id:"WhiteSaucePasta"
+        },
+        {
+            image:'./MenuImages/VegManchurian.jpg',
+            name:'Veg Manchurian',
+            price: 'Rs. 100',
+            id:"VegManchurian"
+        },
+        {
+            image:'./MenuImages/PaneerChilli.jpg',
+            name:'Paneer Chilli',
+            price: 'Rs. 200',
+            id:"PaneerChilli"
+        },
+        {
+            image:'./MenuImages/ChineseFriedRice.jpg',
+            name: 'Chinese Fried Rice',
+            price: 'Rs. 150',
+            id:"ChineseFriedRice"
+        },
+        {
+            image:'./MenuImages/ChineseNoodles.jpg',
+            name: 'Chinese Noodles',
+            price: 'Rs. 150',
+            id:"ChineseNoodles"
+        },
+        {
+            image:'./MenuImages/PaneerTikka.jpg',
+            name:'Paneer Tikka',
+            price: 'Rs. 200',
+            id:"PaneerTikka"
+        },
+        {
+            image:'./MenuImages/MargheritaPizza.jpg',
+            name:'Margherita Pizza',
+            price: 'Rs. 300',
+            id:"MargheritaPizza"
+        },
+        {
+            image:'./MenuImages/PeppyPannerPizza.jpg',
+            name:'Peppy Panner Pizza',
+            price: 'Rs. 350',
+            id:"PeppyPannerPizza"
+        },
+        {
+            image:'./MenuImages/MaxicanGreenWavePizza.jpg',
+            name:'Maxican Green Wave Pizza',
+            price: 'Rs. 350',
+            id:"MaxicanGreenWavePizza"
+        },
+        {
+            image: './MenuImages/VegBurger.jpg',
+            name: 'Veg Burger',
+            price: 'Rs. 150',
+            id: "VegBurger"
+        },
+        {
+            image:'./MenuImages/BrownyWithIceCream.jpg',
+            name:'Browny with ice cream',
+            price: 'Rs. 150',
+            id:"BrownyWithIceCream"
+        },
+        {
+            image:'./MenuImages/ChocolateCoatedBrowny.jpg',
+            name:'Chocolate Coated Browny',
+            price: 'Rs. 150',
+            id:"ChocolateCoatedBrowny"
+        }
+        
+    ]
+
+    
+    let items = localStorage.getItem("items")
+    let totalPrice=0;
+    if(items==null){
+        cart.innerHTML="Ther is no item"
+    }else{
+        items=JSON.parse(items)
+        items.forEach(name => {
+            food_items.forEach(element => {
+                if(element.name==name){
+                    let price = element.price
+                    let num_price = parseInt(price.substring(4))
+                    totalPrice=totalPrice+num_price
+                    console.log("Price is ",num_price);
+                    console.log("Total price is",totalPrice);
+                    cart.innerHTML+=`
+                        <div class="cart_item" id="${element.id}">
+                            <p style="text-align: center; font-size: larger;">${element.name}</p>
+                            <img src="${element.image}" alt="">
+                            <span>${element.price}</span>
+                            <button onclick="deleteItem('${element.name}')" class="btn btn-primary shop-item-btn" role="button" style="float:right;margin:0px 5px 50px 0px">Delete</button>   
+                        </div>
+                    `
+                }
+            });
+        });
+        let noOfItems=items.length
+        if(noOfItems>0){
+                // let i =document.getElementsByClassName("item__cart")
+                console.log("Innter is ");
+                let d=document.getElementById("item__cart")
+                d.innerText=`cart(${noOfItems})`
+                let price = document.getElementById("item__price")
+                price.innerText=`Total(Rs. ${totalPrice})`
+                // i.innerHTML=`cart-${noOfItems}`
+        }else{
+            document.getElementById("item__cart").innerText="Cart"
+            document.getElementById("item__price").innerText="Total(0)"
+        }
+    }
+    
+
+   
+    
+
+    function deleteItem(name) {
+
+            console.log("i am deleting " + name);
+            let items = localStorage.getItem("items");
+
+            if (items == null) {
+                itemsObj = [];
+            } else {
+                itemsObj = JSON.parse(items);
+            }
+            let index = itemsObj.indexOf(name)
+            console.log("Index is",index);
+
+            food_items.forEach(element => {
+                if(element.name==name){
+                    let price = element.price
+                    let num_price = parseInt(price.substring(4))
+                    totalPrice=totalPrice-num_price
+                }
+            });
+
+            itemsObj.splice(index, 1);
+            let noOfItems=itemsObj.length
+
+            console.log("Lenth is ",noOfItems);
+            if(noOfItems>0){
+                // let i =document.getElementsByClassName("item__cart")
+                console.log("Innter is ");
+                let d=document.getElementById("item__cart")
+                d.innerText=`cart(${noOfItems})`
+                let price = document.getElementById("item__price")
+                price.innerText=`Total(Rs. ${totalPrice})`
+                // i.innerHTML=`cart-${noOfItems}`
+            }else{
+                document.getElementById("item__cart").innerText="Cart"
+                document.getElementById("item__price").innerText="Total(0)"
+            }
+            console.log("New items is",itemsObj);
+            localStorage.setItem("items", JSON.stringify(itemsObj));
+
+
+            items = localStorage.getItem("items")
+            cart.innerHTML=""
+            if(items==null){
+                cart.innerHTML="Ther si no item"
+            }else{
+                items=JSON.parse(items)
+                items.forEach(name => {
+                    food_items.forEach(element => {
+                        if(element.name==name){
+                            cart.innerHTML+=`
+                                <div class="cart_item" id="${element.id}">
+                                    <p style="text-align: center; font-size: larger;">${element.name}</p>
+                                    <img src="${element.image}" alt="">
+                                    <span>${element.price}</span>
+                                    <button onclick="deleteItem('${element.name}')" class="btn btn-primary shop-item-btn" role="button" style="float:right;margin:0px 5px 50px 0px">Delete</button>   
+                                </div>
+                            `
+                        }
+                    });
+                });
+            }
+            
+        }
+
+</script>
+
+</html>

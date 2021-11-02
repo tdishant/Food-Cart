@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <style>
+        *{
+         margin: 0px;
+         padding: 0px;
+         font-family: 'Baloo Bhai 2', cursive;
+        
+        }
+
+        #navbar{
+            display: flex;
+            text-align: center;
+            position: sticky;
+                top: 0px;
+            /* justify-content: center; */
+        }
+
+        /* this is for logo and img */
+        #logo{
+            height: 80px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 50px;
+            padding: 5px;
+            filter: invert(100%);
+        }
+        #logo img{
+            height: 40px;
+            width: 10px;
+        }
+
+        /* This is for ul  */
+
+        #navbar ul{
+            display: flex;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 107%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+
+        }
+
+        #navbar ul li{
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navbar ul li a{
+            text-decoration: none;
+            display: block;
+            margin: 20px 60px;
+            color:white;
+            /* border: 2px solid black; */
+            padding: 10px;
+            /* padding: 40px; */
+        }
+
+        #navbar ul li a:hover{
+            border:2px solid black;
+            border-radius: 10px;
+            background-color: grey;
+            color: black;
+            font-weight: bold;
+        }
+
+        #menu_items{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .menu_item{
+            height: 350px;
+            width: 300px;
+            border:2px solid black;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 23px;
+            background-color: rgb(233, 224, 224);
+            cursor: pointer;
+        }
+        .menu_item>img{
+            height: 250px;
+            width: 250px;
+            border-radius: 23px;
+            border: 2px solid black;
+            margin: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <nav id="navbar">
+        <img src="./HomePageImages/Logo.png" alt="OnlineMeals.com" id="logo">
+
+         <ul>
+             <li class="item"><a href="./index.html">Home</a></li>
+             <li class="item"><a href="./index.html#services">Services</a></li>
+             <li class="item"><a href="./Menu.html">Menu</a></li>
+             <li class="item"><a href="./aboutus.html">About us</a></li>
+             <li class="item"><a href="./cart.html"><div id="item__cart">Cart</div></a></li>
+         </ul>
+
+    </nav>
+    <div style="background-color:burlywood;margin-top: -14px;">
+        <h3 style="margin-top: 20px;font-size: xx-large;text-align: center;">Menu</h3>
+        <div id="menu_items">
+            <!-- <div class="menu_item">
+                <img src="kadai-paneer.jpg" alt="">
+                <p style="text-align: center; font-size: larger;">Kadai Paneer</p>
+            </div> -->
+        
+        </div>
+    </div>
+</body>
+
+<script>
+    
+    let menu = document.getElementById('menu_items')
+    let items = [
+        {
+            image:'./MenuImages/KadaiPaneer.jpg',
+            name:'Kadai Panner',
+            price: 'Rs. 250',
+            id:"KadaiPaneer"
+        },
+        {
+            image:'./MenuImages/MasalaPasta.jpg',
+            name:'Masala Pasta',
+            price: 'Rs. 150',
+            id:"MasalaPasta"
+        },
+        {
+            image:'./MenuImages/MasalaMacaroniPasta.jpg',
+            name:'Masala Macaroni Pasta',
+            price: 'Rs. 150',
+            id:"MasalaMacaroniPasta"
+        },
+        {
+            image:'./MenuImages/WhiteSaucePasta.jpg',
+            name:'White Sauce Pasta',
+            price: 'Rs. 150',
+            id:"WhiteSaucePasta"
+        },
+        {
+            image:'./MenuImages/VegManchurian.jpg',
+            name:'Veg Manchurian',
+            price: 'Rs. 100',
+            id:"VegManchurian"
+        },
+        {
+            image:'./MenuImages/PaneerChilli.jpg',
+            name:'Paneer Chilli',
+            price: 'Rs. 200',
+            id:"PaneerChilli"
+        },
+        {
+            image:'./MenuImages/ChineseFriedRice.jpg',
+            name: 'Chinese Fried Rice',
+            price: 'Rs. 150',
+            id:"ChineseFriedRice"
+        },
+        {
+            image:'./MenuImages/ChineseNoodles.jpg',
+            name: 'Chinese Noodles',
+            price: 'Rs. 150',
+            id:"ChineseNoodles"
+        },
+        {
+            image:'./MenuImages/PaneerTikka.jpg',
+            name:'Paneer Tikka',
+            price: 'Rs. 200',
+            id:"PaneerTikka"
+        },
+        {
+            image:'./MenuImages/MargheritaPizza.jpg',
+            name:'Margherita Pizza',
+            price: 'Rs. 300',
+            id:"MargheritaPizza"
+        },
+        {
+            image:'./MenuImages/PeppyPannerPizza.jpg',
+            name:'Peppy Panner Pizza',
+            price: 'Rs. 350',
+            id:"PeppyPannerPizza"
+        },
+        {
+            image:'./MenuImages/MaxicanGreenWavePizza.jpg',
+            name:'Maxican Green Wave Pizza',
+            price: 'Rs. 350',
+            id:"MaxicanGreenWavePizza"
+        },
+        {
+            image: './MenuImages/VegBurger.jpg',
+            name: 'Veg Burger',
+            price: 'Rs. 150',
+            id: "VegBurger"
+        },
+        {
+            image:'./MenuImages/BrownyWithIceCream.jpg',
+            name:'Browny with ice cream',
+            price: 'Rs. 150',
+            id:"BrownyWithIceCream"
+        },
+        {
+            image:'./MenuImages/ChocolateCoatedBrowny.jpg',
+            name:'Chocolate Coated Browny',
+            price: 'Rs 150',
+            id:"ChocolateCoatedBrowny"
+        }
+        
+    ]
+
+    
+
+    items.forEach((item)=>{
+        menu.innerHTML+=`
+        <div class="menu_item" id="${item.id}">
+            <p style="text-align: center; font-size: larger;">${item.name}</p>
+            <img src="${item.image}" alt="">
+            <span>${item.price}</span>
+            <button onclick="cart('${item.name}')" class="btn btn-primary shop-item-btn" role="button" style="float:right;margin:0px 5px 50px 0px">ADD TO CART</button>   
+        </div>
+    `
+    })
+    cartItem=[]
+    function cart(id) {
+        // console.log(id);
+        // console.log("clicked");
+        // cartItem.push(id)
+        // console.log(cartItem);
+        // localStorage.setItem('item',id)
+        // let item = localStorage.getItem('item')
+        // console.log("item is ",item);
+
+        let items = localStorage.getItem("items")
+        if(items==null){
+            items=[]
+        }else{
+            items=JSON.parse(items)
+        }
+        items.push(id)
+        console.log("All Items");
+        console.log(items);
+        if(items.length>0){
+            document.getElementById("item__cart").innerText=`Cart(${items.length})`
+        }
+        localStorage.setItem("items",JSON.stringify(items))
+
+    };
+    
+    
+    
+</script>
+
+</html>

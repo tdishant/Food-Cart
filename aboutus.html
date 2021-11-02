@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs</title>
+
+    <style>
+           *{
+         margin: 0px;
+         padding: 0px;
+         font-family: 'Baloo Bhai 2', cursive;
+     }
+     body{
+         background-color: burlywood;
+     }
+
+     #navbar{
+         display: flex;
+         text-align: center;
+         position: sticky;
+            top: 0px;
+     }
+
+     /* this is for logo and img */
+     #logo{
+          height: 80px;
+          width: 100px;
+          border: 2px solid black;
+          border-radius: 50px;
+          padding: 5px;
+          filter: invert(100%);
+     }
+     #logo img{
+         height: 40px;
+         width: 10px;
+     }
+
+/* This is for ul  */
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 107%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    display: block;
+    margin: 20px 60px;
+    color:white;
+    /* border: 2px solid black; */
+    padding: 10px;
+    /* padding: 40px; */
+}
+
+#navbar ul li a:hover{
+    border:2px solid black;
+    border-radius: 10px;
+    background-color: grey;
+    color: black;
+    font-weight: bold;
+
+}
+
+.content-section {
+  margin: 1em;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+.section-header {
+  font-family: "Lobster", cursive;
+  font-weight: normal;
+  color: #333333;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.about-image {
+  float: left;
+  height: 200px;
+  margin: 15px;
+  border-radius: 50%;
+}
+
+.hotel-name {
+  text-align: center;
+  margin: 0;
+  font-size: 4em;
+  font-family: "Lobster", cursive;
+  font-weight: normal;
+  color: white;
+}
+
+.hotel-name-large {
+  font-size: 6em;
+}
+
+.content-section {
+  margin: 1em;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+.main-footer {
+  background-color: rgb(92, 56, 10);
+  color: white;
+  padding: 0.25em;
+}
+.main-footer-container {
+  display: flex;
+  align-items: center;
+}
+.main-footer-container ul {
+  flex-grow: 1;
+  text-align: end;
+}
+.footer-nav li {
+  padding: 0 0.5em;
+  display: inline;
+  size: 100px;
+}
+
+
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <img src="./HomePageImages/Logo.png" alt="OnlineMeals.com" id="logo">
+
+         <ul>
+             <li class="item"><a href="./index.html">Home</a></li>
+<<<<<<< HEAD
+             <li class="item"><a href="./Menu.html">Menu</a></li>
+             <li class="item"><a href="#">About us</a></li>
+             <li class="item"><a href="cart.html">Cart</a></li>
+=======
+             <li class="item"><a href="./index.html#services">Services</a></li>
+             <li class="item"><a href="Menu.html">Menu</a></li>
+             <li class="item"><a href="#">About us</a></li>
+             <li class="item"><a href="./index.html#contactus">Contact us</a></li>
+>>>>>>> b2004fe (edited)
+         </ul>
+
+    </nav>
+
+    <section class="content-section container">
+        <h2 class="section-header">ABOUT US</h2>
+        <img class="about-image" src="./AboutUsImages/hotel.jpg">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro similique ullam aut dicta quibusdam dolores facere consectetur consequuntur odit? Maiores aliquid totam rerum provident ratione amet consequatur tempore! Quisquam impedit recusandae incidunt rem? Impedit, voluptas, debitis asperiores modi est aliquid veniam vitae dolor ullam repellendus voluptates dolore totam cum nulla deleniti perferendis consectetur quas. Nesciunt repudiandae error est harum. In possimus veritatis tempora vel, totam obcaecati molestiae rem facilis quae velit ut provident ipsam accusamus placeat, maxime, fugit dolorum illum! Accusamus sit temporibus voluptas voluptatibus dolor eveniet, aperiam unde maxime mollitia reprehenderit in molestias sequi harum? Minima ex numquam incidunt?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi rerum aspernatur exercitationem assumenda aut! Ex obcaecati impedit reprehenderit voluptate numquam ab provident consequuntur praesentium a debitis molestiae, ipsum ullam doloremque optio eum vitae, corrupti fuga nemo sed dolorem, aperiam suscipit labore id possimus. Odit, hic veniam et dolore labore impedit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quis!</p>
+        <img class="about-image" src="./AboutUsImages/Delivery.png">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente et eum labore maxime ullam earum nisi ut atque iure exercitationem adipisci, sunt fugit, quod dolore excepturi perferendis rerum eaque qui, sint ipsa! Mollitia ratione sunt ipsam modi, neque soluta saepe molestiae sapiente impedit atque quibusdam nesciunt. Recusandae dignissimos rerum commodi.</p>    
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit consectetur quibusdam assumenda sunt aspernatur similique consequuntur natus animi facere corrupti iusto fuga corporis necessitatibus reprehenderit quaerat, sapiente debitis excepturi! Eaque rerum rem at iure quis eius impedit, quia ab reprehenderit, quidem assumenda earum sunt obcaecati quas a cupiditate aliquid. Doloribus facere, ea ratione rem amet, quasi architecto similique consequuntur porro quisquam quo nihil error magnam perferendis molestias, aut tempore reiciendis!</p>
+    </section>
+    <footer class="main-footer">
+        <div class="container main-footer-container">
+            <h3 class="hotel-name">OnlineMeals</h3>
+            <ul class="footer-nav">
+                <li><a href="https://www.facebook.com/" target="_blank"><img src="./SocialMediaImages/facebook.png" alt="facebook icon"></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><img src="./SocialMediaImages/instagram.png" alt="instagram icon"></a>
+                </li>
+                <li><a href="https://www.youtube.com/" target="_blank"><img src="./SocialMediaImages/youtube.png" alt="youtube icon"></a></li>
+            </ul>
+        </div>
+        
+    </footer>
+</body>
+</html>
