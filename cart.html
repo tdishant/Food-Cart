@@ -51,6 +51,31 @@
             opacity: 0.8;
 
         }
+        .btn{
+            border: 2px solid black;
+            padding: 8px;
+            margin: 5px;
+            font-size: large;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            justify-content: center;
+            align-items: center;
+            margin:auto;
+            display:block;
+            
+        }
+
+        .btn:hover{
+            background-color: gray;
+        }
+
+        .shop-item-btn{
+            margin: 3px;
+            padding: 5px;
+            font-size: 1rem;
+            
+        }
 
         #navbar ul li{
             list-style: none;
@@ -115,13 +140,18 @@
     </nav>
     <div style="background-color:burlywood;margin-top: -14px;">
         <h3 style="margin-top: 20px;font-size: xx-large;text-align: center;">Your Items</h3>
-        <div id="cart">
-            <!-- <div class="cart_item">
-                <img src="kadai-paneer.jpg" alt="">
-                <p style="text-align: center; font-size: larger;">Kadai Paneer</p>
-            </div> -->
-        
-        </div>
+        <form action="">
+            <div id="cart">
+                <!-- <div class="cart_item">
+                            <img src="kadai-paneer.jpg" alt="">
+                            <p style="text-align: center; font-size: larger;">Kadai Paneer</p>
+                        </div> -->
+            
+            </div>
+            <div>
+                <button type="submit" class="btn">Order Now</button>
+            </div>
+        </form>
     </div>
 </body>
 
