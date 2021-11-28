@@ -176,7 +176,7 @@
     </nav>
     <div style="background-color:burlywood;margin-top: -14px;">
         <h3 style="margin-top: 20px;font-size: xx-large;text-align: center;">Enter Details</h3>
-        <form action="customerdetail.html">
+        <form action="" id="frmcart">
             <div id="cart">
                 <!-- <div class="cart_item">
                             <img src="kadai-paneer.jpg" alt="">
@@ -191,18 +191,18 @@
             <div class="form">
             <div class="formsection">
                 <label for="">Name</label>
-                <input type="text" placeholder="Enter your name" pattern="[A-Za-z]+">  
+                <input type="text" placeholder="Enter your name" pattern="[A-Za-z]+" id="frm1" required>  
             </div>
             <div class="formsection">
                 <label for="">Phone No</label>
-                <input type="Phone no" placeholder="Enter your phone no" pattern="[0-9]{10}">  
+                <input type="Phone no" placeholder="Enter your phone no" pattern="[0-9]{10}" id="frm2" required>  
             </div>
             <div class="formsection">
                 <label for="">Address</label>
-                <textarea name="address" id="" cols="30" rows="10" placeholder="Enter your address"></textarea>
+                <textarea name="address" id="" cols="30" rows="10" placeholder="Enter your address" id="frm3" required></textarea>
             </div>
             <div>
-                <button type="submit" class="btn">place order</button>
+                <button type="submit" class="btn" onclick="palce_order()">place order</button>
             </div>
         </div>
         </form>
@@ -343,6 +343,17 @@
         }else{
             document.getElementById("item__cart").innerText="Cart"
             document.getElementById("item__price").innerText="Total(0)"
+        }
+    }
+
+    function palce_order(){
+
+        let noOfItems = items.length
+        let frm = document.getElementById("frmcart")
+        if(noOfItems==0 && frm){
+            alert("cart is empty");
+        }else{
+            frm.action = "acknowledgement.html"
         }
     }
 

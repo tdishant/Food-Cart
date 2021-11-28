@@ -141,7 +141,7 @@
     </nav>
     <div style="background-color:burlywood;margin-top: -14px;">
         <h3 style="margin-top: 20px;font-size: xx-large;text-align: center;">Your Items</h3>
-        <form action="customerdetail.html">
+        <form action="" id="frmcart">
             <div id="cart">
                 <!-- <div class="cart_item">
                             <img src="kadai-paneer.jpg" alt="">
@@ -150,7 +150,7 @@
             
             </div>
             <div>
-                <button type="submit" class="btn">Order Now</button>
+                <button type="submit"class="btn" onclick="myfunction()">Order Now</button>
             </div>
         </form>
     </div>
@@ -293,7 +293,18 @@
         }
     }
     
+    function myfunction(){
 
+        let noOfItems = items.length
+        let frm = document.getElementById("frmcart")
+        if(noOfItems==0 && frm){
+            alert("cart is empty");
+            frm.action = "" 
+        }
+        else{
+            frm.action = "customerdetail.html"
+        }
+    }
    
     
 
@@ -361,6 +372,8 @@
             }
             
         }
+
+    
 
 </script>
 
